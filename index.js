@@ -6,7 +6,7 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
 
   // Navigate the page to a URL
-  await page.goto('https://id.chotot.com/', { timeout: 0, waitUntil: 'networkidle0' });
+  await page.goto('https://id.chotot.com/', { timeout: 0, waitUntil: 'domcontentloaded' });
 
   // get form with class mocked-styled-13
   const form = await page.$('.mocked-styled-13');
